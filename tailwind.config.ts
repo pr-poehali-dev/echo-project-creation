@@ -61,6 +61,25 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Техническая палитра диспетчерской
+				terminal: {
+					DEFAULT: "#0d1117",
+					light: "#161b22",
+					lighter: "#21262d",
+				},
+				status: {
+					active: "#00ff41",
+					warning: "#ffb000",
+					error: "#ff4747",
+					offline: "#6e7681",
+				},
+				metro: {
+					red: "#dc143c",
+					blue: "#0066cc", 
+					green: "#00aa44",
+					purple: "#8b008b",
+					orange: "#ff8c00",
 				}
 			},
 			borderRadius: {
@@ -88,7 +107,33 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-green': 'pulse-green 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+			},
+			keyframes: {
+				'accordion-down': {
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
+				},
+				'accordion-up': {
+					from: {
+						height: 'var(--radix-accordion-content-height)'
+					},
+					to: {
+						height: '0'
+					}
+				},
+				'pulse-green': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0.5' },
+				},
+			},
+			fontFamily: {
+				mono: ['JetBrains Mono', 'Consolas', 'Monaco', 'monospace'],
 			}
 		}
 	},
